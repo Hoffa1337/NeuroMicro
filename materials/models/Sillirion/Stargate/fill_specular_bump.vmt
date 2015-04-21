@@ -1,5 +1,5 @@
 "Vertexlitgeneric"
 {
-	"$baseTexture" "/fill_specular_bump"
+	"$baseTexture" "models/Sillirion/Stargate/fill_specular_bump"
 	"$model" "1"
 }

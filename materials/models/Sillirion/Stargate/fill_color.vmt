@@ -1,5 +1,5 @@
 "Vertexlitgeneric"
 {
-	"$baseTexture" "/fill_color"
+	"$baseTexture" "models/Sillirion/Stargate/fill_color"
 	"$model" "1"
 }
