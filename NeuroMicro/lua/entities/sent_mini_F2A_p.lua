@@ -7,7 +7,8 @@ ENT.Spawnable	= true
 ENT.AdminSpawnable = false
 ENT.VehicleType = VEHICLE_PLANE
 
-ENT.InitialHealth = 300				
+ENT.InitialHealth = 300
+	
 ENT.ControlSurfaces  = {
 	Elevator = { 
 			Mdl = "models/killstr3aks/neuroplanes/american/F2A_Buffalo_elevators.mdl", 
@@ -142,21 +143,7 @@ ENT.EngineSounds = {
 	"WT/Engines/engine08_1750rpm.wav",
 	"vehicles/fast_windloop1.wav",
 	"WT/Engines/engine08_1750rpm.wav"}
--- ENT.Armament = {
 
-					-- { 
-						-- PrintName = "Big Evil Bomb",
-						-- Mdl = "Models/Killstr3aKs/NeuroPlanes/German/micro_100kg_bomb.mdl" ,
-						-- Pos = Vector( 0, 0, -5), 							-- Pos, Hard point location on the plane fuselage.
-						-- Ang = Angle( 0, 0, 0 ), 								-- Ang, object angle
-						-- Type = "Bomb",						-- Type, used when creating the object
-						-- BurstSize = 1,
-						-- Cooldown = 2, 										-- Cooldown between weapons
-						-- isFirst	= nil,										-- If a plane got 2 rockets of the same type, set the first rocket to isFirst = true.
-						-- Class = "sent_mini_bomb",
-						-- LaunchSound = "vehicles/Crane/crane_magnet_release.wav"
-					-- }; 	
-				-- };
 if( SERVER ) then
 
 	AddCSLuaFile(  )
@@ -167,6 +154,8 @@ if( SERVER ) then
 		ent:SetAngles( ply:GetAngles() )
 		ent:Spawn()
 		ent:Activate()
+
+		
 		timer.Simple( 0, function() if( IsValid( ply ) && IsValid( ent ) ) then ent:Use( ply,ply,0,0 ) end end )
 		if( ply:IsAdmin() && type( ent.AdminArmament ) == "table" ) then
 			ent:AddAdminEquipment()
