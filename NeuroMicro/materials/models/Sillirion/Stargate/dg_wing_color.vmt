@@ -1,5 +1,5 @@
 "Vertexlitgeneric"
 {
-	"$baseTexture" "/dg_wing_color"
+	"$baseTexture" "models/Sillirion/Stargate/dg_wing_color"
 	"$model" "1"
 }

@@ -1,5 +1,5 @@
 "lightmappedgeneric"
 {
-	"$baseTexture" "/dg_wing_bump"
+	"$baseTexture" "models/Sillirion/Stargate/dg_wing_bump"
 	"$model" "1"
 }
