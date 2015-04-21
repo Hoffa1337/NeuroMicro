@@ -6,6 +6,8 @@ ENT.Category 		= "NeuroTec Micro";
 ENT.Spawnable	= true
 ENT.AdminSpawnable = false
 ENT.VehicleType = VEHICLE_PLANE
+
+ENT.ArmamentDamageSystem = true 
 ENT.Armament = {
 					{ 
 						PrintName = "Torpedophile",
