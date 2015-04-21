@@ -6,7 +6,22 @@ ENT.Category 		= "NeuroTec Micro";
 ENT.Spawnable	= true
 ENT.AdminSpawnable = false
 ENT.VehicleType = VEHICLE_PLANE
-
+ENT.Armament = {
+					{ 
+						PrintName = "Torpedophile",
+						Mdl = "models/neuronaval/killstr3aks/mini_torpedo_planes.mdl" ,
+						Pos = Vector( -5, 0, -8), 							-- Pos, Hard point location on the plane fuselage.
+						Ang = Angle( 0, 0, 0 ), 								-- Ang, object angle
+						Type = "Bomb",						-- Type, used when creating the object
+						BurstSize = 1,
+						Cooldown = 5, 										-- Cooldown between weapons
+						isFirst	= nil,										-- If a plane got 2 rockets of the same type, set the first rocket to isFirst = true.
+						Damage = 7500,
+						Radius = 60,
+						Class = "sent_mini_torpedo",
+						LaunchSound = "vehicles/Crane/crane_magnet_release.wav"
+					}; 	
+				};
 ENT.InitialHealth = 250
 ENT.ControlSurfaces  = {
 	Elevator = { 
@@ -132,21 +147,21 @@ ENT.EngineSounds = {
 	"WT/Engines/engine07_700rpm.wav",
 	"vehicles/fast_windloop1.wav",
 	"WT/Engines/engine12_1750rpm.wav"}
-ENT.Armament = {
+-- ENT.Armament = {
 
-					{ 
-						PrintName = "Big Evil Bomb",
-						Mdl = "Models/Killstr3aKs/NeuroPlanes/German/micro_100kg_bomb.mdl" ,
-						Pos = Vector( 0, 0, -5), 							-- Pos, Hard point location on the plane fuselage.
-						Ang = Angle( 0, 0, 0 ), 								-- Ang, object angle
-						Type = "Bomb",						-- Type, used when creating the object
-						BurstSize = 1,
-						Cooldown = 2, 										-- Cooldown between weapons
-						isFirst	= nil,										-- If a plane got 2 rockets of the same type, set the first rocket to isFirst = true.
-						Class = "sent_mini_bomb",
-						LaunchSound = "vehicles/Crane/crane_magnet_release.wav"
-					}; 	
-				};
+					-- { 
+						-- PrintName = "Big Evil Bomb",
+						-- Mdl = "Models/Killstr3aKs/NeuroPlanes/German/micro_100kg_bomb.mdl" ,
+						-- Pos = Vector( 0, 0, -5), 							-- Pos, Hard point location on the plane fuselage.
+						-- Ang = Angle( 0, 0, 0 ), 								-- Ang, object angle
+						-- Type = "Bomb",						-- Type, used when creating the object
+						-- BurstSize = 1,
+						-- Cooldown = 2, 										-- Cooldown between weapons
+						-- isFirst	= nil,										-- If a plane got 2 rockets of the same type, set the first rocket to isFirst = true.
+						-- Class = "sent_mini_bomb",
+						-- LaunchSound = "vehicles/Crane/crane_magnet_release.wav"
+					-- }; 	
+				-- };
 if( SERVER ) then
 
 	AddCSLuaFile(  )
@@ -157,6 +172,7 @@ if( SERVER ) then
 		ent:SetAngles( ply:GetAngles() )
 		ent:Spawn()
 		ent:Activate()
+				-- constraint.Weld( ent, game.GetWorld(), 0,0,0, false )
 		timer.Simple( 0, function() if( IsValid( ply ) && IsValid( ent ) ) then ent:Use( ply,ply,0,0 ) end end )
 		if( ply:IsAdmin() && type( ent.AdminArmament ) == "table" ) then
 			ent:AddAdminEquipment()

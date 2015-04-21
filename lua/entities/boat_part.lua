@@ -41,6 +41,40 @@ if( SERVER ) then
 		end
 		ParticleEffect( "microplane_damage",dmginfo:GetDamagePosition(), Angle(0,0,0), nil )
 		
+		if( dmg > 350 ) then
+		
+			local tr,trace = {},{}
+			tr.start = dmginfo:GetDamagePosition()
+			tr.endpos = self:GetPos()
+			tr.filter = {}
+			tr.mask = MASK_SOLID
+			trace = util.TraceLine( tr )
+			
+			local a,b = trace.HitPos + trace.HitNormal, trace.HitPos - trace.HitNormal
+			util.Decal("Scorch", a, b )
+	
+			local normdist = -2 
+	
+			if( trace.Hit && IsValid( trace.Entity ) && trace.Entity == self  && self.HealthVal < .85 * self.InitialHealth ) then
+				
+				if( self.DamagedPoints == nil ) then self.DamagedPoints = {} end
+				
+				if( self.DamagePoints == {} ) then
+				
+					self.DamagedPoints[1] = self:WorldToLocal( trace.HitPos + trace.HitNormal * normdist )
+				
+				else
+				
+					self.DamagedPoints[#self.DamagedPoints+1] = self:WorldToLocal( trace.HitPos + trace.HitNormal * normdist )
+					
+				end
+				
+			end
+		
+		
+		end
+
+		
 		if( self.HealthVal < .35 ) then 
 		
 			if( !self.BigFire ) then
@@ -96,6 +130,30 @@ if( SERVER ) then
 
 	
 	function ENT:Think() 
+	
+		if( self:WaterLevel() < 3 ) then
+		
+			if( self.DamagedPoints && #self.DamagedPoints > 0 ) then
+				
+				for i=1,#self.DamagedPoints do
+				
+					local effectdata = EffectData()
+					effectdata:SetOrigin( self:LocalToWorld( self.DamagedPoints[i] ) )
+					if( self.IsMicroCruiser ) then 
+						
+						effectdata:SetScale( .5 )
+						
+					end
+					
+					self.HealthVal = self.HealthVal - math.random(1,4) 
+					
+					util.Effect( "immolate", effectdata )
+
+				end
+			
+			end
+			
+		end
 		
 		if( self.Destroyed ) then 
 			
