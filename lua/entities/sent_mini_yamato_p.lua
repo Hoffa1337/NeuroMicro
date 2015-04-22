@@ -72,7 +72,7 @@ ENT.WeaponSystems = {{
 		TPos = Vector( 1121, -0, 600 )*.0915,
 		Barrel = "models/NeuroNaval/StarChick971/Battleships/yamato_mainturret_cannon.mdl",
 		BaPos = Vector( 1300, -0, 690 )*.0915,
-		BarrelLength = 75,
+		BarrelLength = 35,
 		AmmoType = "sent_mini_naval_shell",
 		AmmoModel = "",
 		Cooldown = 15, -- testing
@@ -82,10 +82,10 @@ ENT.WeaponSystems = {{
 		MaxYaw = 120,
 		TowerTurnSpeed = .3,
 		ShootSound = "Cannons/18-inch_shot_"..math.random(1, 3)..".wav",
-		Muzzle = "tank_muzzleflash",
+		Muzzle = "navalgun_muzzleflash",
 		NumShots = 3,
 		WeaponGroup = 1,
-		BarrelPorts =  { Vector( 355, -124, 4 )*.0915, Vector( 355, -1, 3 )*.0915,Vector( 355, 128, 2 )*.0915 } -- use this if you want to use a single model with more than 1 barrel.
+		BarrelPorts =  {Vector( 25,-11, 0 ), Vector( 25,0, 0 ),Vector( 25,11, 0 ) } -- use this if you want to use a single model with more than 1 barrel.
 	},
 	{
 		_2Dpos = { x = 0,y = -15, size = 64, icon = Material( "vgui/ui/ships/yamato_maingun.png" ), iconSize = 33 },
@@ -137,7 +137,6 @@ ENT.WeaponSystems = {{
 		BarrelPorts =  { Vector( 155, -90, 4 )*.0915, Vector( 155, -1, 3 )*.0915,Vector( 155, 90, 2 )*.0915 } -- use this if you want to use a single model with more than 1 barrel.
 	},
 
-	
 	{
 		_2Dpos = { x = 0,y = -65, size = 64, icon = Material( "vgui/ui/ships/yamato_maingun.png" ), iconSize = 44 },
 		Name = "460mm Main Battery",
@@ -147,7 +146,7 @@ ENT.WeaponSystems = {{
 		TPos = Vector( 2121, -0, 469 )*.0915,
 		Barrel = "models/NeuroNaval/StarChick971/Battleships/yamato_mainturret_cannon.mdl",
 		BaPos = Vector( 2300, -0, 540 )*.0915,
-		BarrelLength = 75,
+		BarrelLength = 35,
 		AmmoType = "sent_mini_naval_shell",
 		AmmoModel = "",
 		Cooldown = 15,
@@ -157,10 +156,10 @@ ENT.WeaponSystems = {{
 		MaxYaw = 145,
 		TowerTurnSpeed = .3,
 		ShootSound = "Cannons/18-inch_shot_"..math.random(1, 3)..".wav",
-		Muzzle = "tank_muzzleflash",
+		Muzzle = "navalgun_muzzleflash",
 		NumShots = 3,
 		WeaponGroup = 1,
-		BarrelPorts =  { Vector( 355, -124, 4 )*.0915, Vector( 355, -1, 3 )*.0915, Vector( 355, 128, 2 )*.0915 }
+		BarrelPorts =  {Vector( 25,-11, 0 ), Vector( 25,0, 0 ),Vector( 25,11, 0 ) } -- use this if you want to use a single model with more than 1 barrel.
 	},{
 		_2Dpos = { x = 0, y = 75, size = 64 , icon = Material( "vgui/ui/ships/yamato_maingun.png" ), iconSize = 44 },
 		Name = "460mm Main Battery",
@@ -171,7 +170,7 @@ ENT.WeaponSystems = {{
 		TAng = Angle( 0, 180, 0 ),
 		Barrel = "models/NeuroNaval/StarChick971/Battleships/yamato_mainturret_cannon.mdl",
 		BaPos = Vector( -2890, -0, 600 )*.0915,
-		BarrelLength = 75,
+		BarrelLength = 35,
 		AmmoType = "sent_mini_naval_shell",
 		AmmoModel = "",
 		Cooldown = 15,
@@ -181,12 +180,12 @@ ENT.WeaponSystems = {{
 		MaxYaw = 120,
 		TowerTurnSpeed = .3,
 		ShootSound = "Cannons/18-inch_shot_"..math.random(1, 3)..".wav",
-		Muzzle = "tank_muzzleflash",
+		Muzzle = "navalgun_muzzleflash",
 		NumShots = 3,
 		WeaponGroup = 1,
-		BarrelPorts =  { Vector( 355, -124, 4 )*.0915, Vector( 355, -1, 3 )*.0915,Vector( 355, 128, 2 )*.0915  } }
+		BarrelPorts =  {Vector( 25,-11, 0 ), Vector( 25,0, 0 ),Vector( 25,11, 0 ) } -- use this if you want to use a single model with more than 1 barrel.
 		
-,{
+},{ 
 		_2Dpos = { x = 15, y = 35, size = 64, icon = Material( "vgui/ui/ships/yamato_aa.png" ), iconSize = 44 },
 		Name = "88mm Flak",
 		Base = "models/props_junk/garbage_metalcan002a.mdl",
