@@ -16,8 +16,8 @@ ENT.TurnAngleValue = .001
 -- ENT.TurnIncrement = 10.15 
 -- Variables
 ENT.CamDist 			= 150
-ENT.CamUp 				= -50
-ENT.CameraMinZ			= 78 
+ENT.CamUp 				= 8
+ENT.CameraMinZ			= 8 
 ENT.WorldScale 			= 0.0915 -- 1/16th of original size
 ENT.InitialHealth 		= 20000
 --  Weapon data
@@ -32,7 +32,7 @@ ENT.ReverseSpeed 		= ENT.MinVelocity/3
 ENT.TurnModifierValue 	= 45.1 	
 ENT.FullSink 			= 0.71045/4
 ENT.HalfSink 			= 0.71045/2
-ENT.BuoyancyRatio 		= 80
+ENT.BuoyancyRatio 		= 100
 
 -- Submarine Variables 
 ENT.BuoyancyRatioSink = 25
@@ -52,7 +52,7 @@ ENT.PitchSineValue = 1001
 ENT.WaterBreakPosition = Vector( 125,0,-25 )
 ENT.PeriscopePosition 	= Vector( 20, -0, 75 )
 ENT.ExitPos 			= Vector( 664, -158, 1158 )*.0915
-ENT.CockpitviewPosition = Vector( -5, 0, 31 )
+ENT.CockpitviewPosition = Vector( -4.5, .75, 25.4 )
 -- ENT.ExhaustPosition 	= {Vector( -15, 0, 70 ),
 							-- Vector( 3, 0, 70 ),
 							-- Vector( 42, 0, 70 ),
