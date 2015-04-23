@@ -168,7 +168,7 @@ ENT.PrimaryMaxShots = 40
 -- End of weapons
 
 -- Visuals
-ENT.CameraDistance = 110
+ENT.CameraDistance = 200
 ENT.CameraUp = 0
 ENT.TinySmoke = true
 ENT.CockpitPosition = Vector( -0, 0,6 )
