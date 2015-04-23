@@ -1,0 +1,8 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\U Class Submarine\2d4341bc"
+	"$bumpmap" ""models\U Class Submarine\1f5b06d6"
+	"$surfaceprop" "Metal"
+	"$nocull" "1"
+	"$halflambert" "1"
+}
