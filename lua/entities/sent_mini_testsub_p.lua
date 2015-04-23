@@ -61,8 +61,9 @@ ENT.CockpitviewPosition = Vector( -4.5, .75, 25.4 )
 
 -- Speed & Sounds
 ENT.EngineSoundPath 	= "Misc/water_movement.wav"--"vehicles/diesel_loop2.wav" 
-ENT.Model 				= "models/NeuroNaval/StarChick971/Submarines/u class submarine.mdl"
--- ENT.DeckModel = ""
+ENT.Model 				= "models/neuronaval/starchick971/submarines/hms u class submarine_hull.mdl"
+ENT.DeckModel = "models/neuronaval/starchick971/submarines/hms u class submarine_deck.mdl"
+ENT.DeckMass = 50
 -- ENT.PropellerPosition = Vector(-220, 0, 0 )
 ENT.PropellerSplashSize = 15 
 ENT.PropellerPos = Vector( -85, 0, -6 )
@@ -70,8 +71,8 @@ ENT.PropellerPos = Vector( -85, 0, -6 )
 ENT.NumberOfWeaponGroups = 2
 ENT.WeaponGroupIcons = { "vgui/ui/ui_he.png", "vgui/ui/ui_torp.png"  }
 -- 2D Boat Texture
-ENT.HUDData = { Background = Material("vgui/ui/ships/clemson.png" ), 
-				W = 232, 
+ENT.HUDData = { Background = Material("vgui/ui/ships/testsub-hull.png" ), 
+				W = 516, 
 				H = 516, 
 				X = 100, 
 				Y = 400,
@@ -79,7 +80,7 @@ ENT.HUDData = { Background = Material("vgui/ui/ships/clemson.png" ),
 
 ENT.WeaponSystems = {
 	{
-		_2Dpos = { x = 0,y = -5, size = 64, icon = Material( "vgui/ui/ships/clemson_maingun.png" ), iconSize = 45 },
+		_2Dpos = { x = -5,y =  -25, size = 64, icon = Material( "vgui/ui/ships/clemson_maingun.png" ), iconSize = 62 },
 		Name = "Mark 9 100mm",
 		Base = "models/props_junk/garbage_metalcan002a.mdl",
 		BPos =Vector( 13, -0, 5),
@@ -102,7 +103,7 @@ ENT.WeaponSystems = {
 		WeaponGroup = 1
 		-- BarrelPorts =  { Vector( 355, -124, 4 )*.0915, Vector( 355, -1, 3 )*.0915,Vector( 355, 128, 2 )*.0915 } -- use this if you want to use a single model with more than 1 barrel.
 	},{
-		_2Dpos = { x = 0,y = -170, size = 64, icon = Material( "vgui/ui/ships/clemson_maingun.png" ), iconSize = 45 },
+		_2Dpos = { x = -5,y = -240, size = 64, icon = Material( "vgui/ui/ships/clemson_maingun.png" ), iconSize = 4 },
 		Name = "Torpedo Tubes",
 		Base = "models/props_junk/garbage_metalcan002a.mdl",
 		BPos =Vector( 99, -0, 0 ),
