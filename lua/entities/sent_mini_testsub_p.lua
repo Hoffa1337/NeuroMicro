@@ -38,7 +38,7 @@ ENT.BuoyancyRatio 		= 100
 ENT.BuoyancyRatioSink = 25
 ENT.MaxDivingDepth = 1000 -- Units
 ENT.MaxDiveSpeed = 32 -- Units/s 
-
+ENT.DiveSpeed = 0.0345 
 ENT.DampFactor 			= 1.7
 ENT.IsMicroSubmarine = true 
 ENT.WonkyHull = true   
